@@ -1,0 +1,83 @@
+
+/* responsive menu for mobile */
+
+@media only screen and (max-width: 768px) {
+    .container {
+        padding-right: 0;
+        width: 100%;
+    }
+    header .container section nav {
+        padding: 35px 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+    header .container section nav .menu-items {
+        position: fixed;
+        background: #2D25A0;
+        text-align: center;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        display: block;
+        left: -100%;
+        transition: all linear 0.3s;
+    }
+    #click:checked~.menu-items {
+        left: 0;
+    }
+    header .container section nav label i {
+        display: block;
+        left: 0;
+        top: 10;
+    }
+    header .container section nav .menu-items ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .container section nav .menu-items ul li {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding-top: 20px;
+    }
+    header .container section nav .menu-items ul li.active,
+    header .container section nav .menu-items ul li:hover a,
+    header .container section nav .menu-items ul li:hover {
+        color: #E02C6D;
+        background: none;
+    }
+    header .container section nav .login {
+        margin-top: 15px;
+    }
+    /* responsive banner for mobile */
+    header .container .banner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .container .banner .banner-title {
+        padding-bottom: 30px;
+        text-align: center;
+    }
+    header .container .banner h1 {
+        padding: 0 30px;
+        padding-bottom: 20px;
+        font-size: 2.5em;
+    }
+    /* responsive players */
+    .players .container {
+        justify-content: center;
+        padding: 20px 15% 20px 15%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .highlight .container {
+        text-align: center;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer .container img {
+        padding: 0 20%;
+        width: 100%;
+    }
+}
